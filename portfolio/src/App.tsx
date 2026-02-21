@@ -9,11 +9,13 @@ export default function App() {
 
       {/* Header */}
       <section className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-semibold tracking-tight text-white uppercase">
-          Yashas Bansode
+
+        {/* CTF Name */}
+        <h1 className="ctf-name">
+          YASHAS BANSODE
         </h1>
 
-        <p className="mt-2 text-blue-400 font-medium">
+        <p className="mt-4 text-blue-400 font-medium">
           Cybersecurity Enthusiast , TryHackMe Top 6%
         </p>
 
@@ -52,9 +54,9 @@ export default function App() {
             tags={["Python", "Hashing"]}
           />
           <Project
-            title="Beginner CTF"
+            title="CTF1"
             link="https://github.com/yashas0510/CTF1"
-            description="Beginner level ctf for students to get an idea of what ctf is."
+            description="A beginner level ctf challenge for student to learn and solve by applying concepts ."
             tags={["React", "TypeScript"]}
           />
           <Project
@@ -84,7 +86,7 @@ export default function App() {
           <Experience
             role="Cyber Security & Digital Forensics Intern"
             org="Cyber Secured India"
-            period="Jan 2024 – Mar 2024"
+            period="Dec 2023 – Mar 2024"
             points={[
               "Performed password recovery and encryption analysis using Hashcat.",
               "Conducted security assessments using Burp Suite, Wireshark, and Kali Linux.",
@@ -159,39 +161,20 @@ export default function App() {
 
 function Project({ title, link, description, tags }: any) {
   return (
-    <Card
-      className="
-        bg-[#3e4651]
-        border-4 border-[#4a6fb3]
-        shadow-[8px_8px_0px_#000]
-        hover:-translate-y-1
-        hover:border-[#5d87d6]
-        transition-all
-      "
-    >
+    <Card className="bg-[#3e4651] border-4 border-[#4a6fb3] shadow-[8px_8px_0px_#000] hover:-translate-y-1 hover:border-[#5d87d6] transition-all">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white flex gap-1"
-          >
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-white flex gap-1">
             {title}
             <ExternalLink className="w-4 h-4 text-blue-400" />
           </a>
         </CardTitle>
       </CardHeader>
-
       <CardContent>
         <p className="text-gray-300 mb-4">{description}</p>
-
         <div className="flex flex-wrap gap-2">
           {tags.map((t: string) => (
-            <Badge
-              key={t}
-              className="border-2 border-[#4a6fb3] text-white bg-transparent"
-            >
+            <Badge key={t} className="border-2 border-[#4a6fb3] text-white bg-transparent">
               {t}
             </Badge>
           ))}
@@ -203,18 +186,11 @@ function Project({ title, link, description, tags }: any) {
 
 function Experience({ role, org, period, points }: any) {
   return (
-    <Card
-      className="
-        bg-[#3e4651]
-        border-4 border-[#4a6fb3]
-        shadow-[8px_8px_0px_#000]
-      "
-    >
+    <Card className="bg-[#3e4651] border-4 border-[#4a6fb3] shadow-[8px_8px_0px_#000]">
       <CardHeader>
         <CardTitle>{role}</CardTitle>
         <p className="text-sm text-gray-400">{org} · {period}</p>
       </CardHeader>
-
       <CardContent>
         <ul className="list-disc pl-5 space-y-2 text-gray-300">
           {points.map((p: string) => <li key={p}>{p}</li>)}
@@ -230,15 +206,7 @@ function ContactItem({ icon, href, text }: any) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="
-        flex items-center gap-3
-        border-4 border-[#4a6fb3]
-        bg-[#3e4651]
-        px-4 py-3
-        shadow-[6px_6px_0px_#000]
-        hover:-translate-y-1
-        transition-all
-      "
+      className="flex items-center gap-3 border-4 border-[#4a6fb3] bg-[#3e4651] px-4 py-3 shadow-[6px_6px_0px_#000] hover:-translate-y-1 transition-all"
     >
       {icon}
       <span>{text}</span>
