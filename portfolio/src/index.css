@@ -133,3 +133,20 @@
     4px 4px 0px #4A6FB3,
     8px 8px 0px rgba(0, 0, 0, 0.4);
 }
+/* --- CTA Hover Effect --- */
+
+.cta-hover {
+  transition: all 0.25s ease;
+}
+
+.cta-hover:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  background-color: #5B66D6 !important;
+  border-color: #1E2A44 !important;
+
+  box-shadow: 
+    8px 8px 0px #1B2233,
+    12px 12px 0px rgba(0,0,0,0.4);
+
+  color: white !important;
+}

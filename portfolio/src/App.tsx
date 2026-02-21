@@ -161,7 +161,7 @@ export default function App() {
 
 function Project({ title, link, description, tags }: any) {
   return (
-    <Card className="bg-[#3e4651] border-4 border-[#4a6fb3] shadow-[8px_8px_0px_#000] hover:-translate-y-1 hover:border-[#5d87d6] transition-all">
+    <Card className="bg-[#3e4651] border-4 border-[#4a6fb3] shadow-[8px_8px_0px_#000] cta-hover">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <a href={link} target="_blank" rel="noopener noreferrer" className="text-white flex gap-1">
