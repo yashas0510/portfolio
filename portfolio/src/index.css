@@ -150,3 +150,10 @@
 
   color: white !important;
 }
+/* --- Dotted Grid Background --- */
+
+body {
+  background-color: #000000;
+  background-image: radial-gradient(#1e3a8a 1px, transparent 1px);
+  background-size: 28px 28px;
+}
