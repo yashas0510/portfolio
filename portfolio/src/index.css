@@ -118,3 +118,18 @@
     color: #ffffff;
   }
 }
+.ctf-name {
+  position: relative;
+  font-family: 'Bungee', sans-serif;
+  font-size: 52px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #AFC8FF;
+
+  transform: skewX(-12deg);
+
+  text-shadow:
+    4px 4px 0px #4A6FB3,
+    8px 8px 0px rgba(0, 0, 0, 0.4);
+}
