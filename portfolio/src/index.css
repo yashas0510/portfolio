@@ -33,31 +33,25 @@
 :root {
   --radius: 0.5rem;
 
-  /* Base Background */
-  --background: #0b1220;
+  --background: #000000;
   --foreground: #ffffff;
 
-  /* Cards */
   --card: #3e4651;
   --card-foreground: #ffffff;
 
-  /* Primary Accent (Blue Border) */
   --primary: #4a6fb3;
   --primary-foreground: #ffffff;
 
-  /* Muted Text */
   --muted: #1f2c47;
   --muted-foreground: #c7d1e0;
 
-  /* Borders */
   --border: #4a6fb3;
   --input: #2a3446;
   --ring: #5d87d6;
 }
 
-/* Keep same for dark since this is already dark */
 .dark {
-  --background: #0b1220;
+  --background: #000000;
   --foreground: #ffffff;
   --card: #3e4651;
   --card-foreground: #ffffff;
@@ -80,12 +74,13 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
 
-    /* Dot Grid Background */
-    background-image: radial-gradient(#1e2a44 1px, transparent 1px);
-    background-size: 22px 22px;
+    /* White Dot Grid */
+    background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
   h1, h2, h3 {
@@ -97,27 +92,9 @@
 }
 
 /* =========================
-   CHALLENGE CARD STYLE
+   CTF NAME STYLE
 ========================= */
 
-@layer components {
-  .challenge-card {
-    @apply bg-card text-card-foreground border-4 p-10 text-center transition-all duration-200;
-    border-color: #4a6fb3;
-    box-shadow: 8px 8px 0px #000000;
-  }
-
-  .challenge-card:hover {
-    transform: translateY(-4px);
-    border-color: #5d87d6;
-  }
-
-  .challenge-active {
-    background-color: #1dbbae;
-    border-color: #4a6fb3;
-    color: #ffffff;
-  }
-}
 .ctf-name {
   position: relative;
   font-family: 'Bungee', sans-serif;
@@ -126,14 +103,16 @@
   text-transform: uppercase;
 
   color: #AFC8FF;
-
   transform: skewX(-12deg);
 
   text-shadow:
     4px 4px 0px #4A6FB3,
     8px 8px 0px rgba(0, 0, 0, 0.4);
 }
-/* --- CTA Hover Effect --- */
+
+/* =========================
+   CTA HOVER EFFECT
+========================= */
 
 .cta-hover {
   transition: all 0.25s ease;
@@ -144,16 +123,9 @@
   background-color: #5B66D6 !important;
   border-color: #1E2A44 !important;
 
-  box-shadow: 
+  box-shadow:
     8px 8px 0px #1B2233,
     12px 12px 0px rgba(0,0,0,0.4);
 
   color: white !important;
-}
-/* --- Dotted Grid Background --- */
-
-body {
-  background-color: #ffffff;
-  background-image: radial-gradient(#1e3a8a 1px, transparent 1px);
-  background-size: 28px 28px;
 }
