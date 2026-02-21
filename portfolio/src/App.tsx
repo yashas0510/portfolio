@@ -5,7 +5,7 @@ import { Mail, Github, Linkedin, Phone, ExternalLink, MapPin } from "lucide-reac
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 md:px-16 py-12 font-sans">
+    <main className="min-h-screen text-white px-6 md:px-16 py-12 font-sans">
 
       {/* Header */}
       <section className="max-w-4xl mx-auto">
